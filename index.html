@@ -212,8 +212,8 @@
             { title: "Current Time", info: "3:16 PM." },
             { title: "Address of Origin", info: "Terminal A Marine Terminal Road, Queens, NY 11371." },
             { title: "Address of Destination", info: "1101 W Edgar Rd Hangar 306, Linden, NJ 07036." },
-            { title: "Distance to Destination", info: "0" },
-            { title: "Estimated Time to Destination", info: "0" },
+            { title: "Distance to Destination", info: "28.48 miles." },
+            { title: "Estimated Time to Destination", info: "82 minutes." },
             { title: "State of Charge of Battery", info: "51% charge." },
             { title: "Range of Current Battery", info: "153 minutes." },
             { title: "Estimated Drive Distance with Current Charge", info: "115 miles." },
@@ -231,10 +231,10 @@
                 name: 'Area Garage LLC',
 
                 location: '24 Columbia St, New York, NY 10002, USA',
-                originDistance: '0',
-                originTime: '0',
-                destDistance: '0',
-                destTime: '0',
+                originDistance: '18.82',
+                originTime: '59',
+                destDistance: '14.83',
+                destTime: '33',
 
                 waitTime: [
                         { type: 'J1772', value: '0' },
@@ -274,10 +274,10 @@
                 name: 'Summit Import Corpora',
 
                 location: '100 Summit Pl, Jersey City, NJ 07305, USA',
-                originDistance: '0',
-                originTime: '0',
-                destDistance: '0',
-                destTime: '0',
+                originDistance: '9.47',
+                originTime: '34',
+                destDistance: '24.94',
+                destTime: '53',
 
                 
                 waitTime: [
@@ -944,8 +944,8 @@
         // Add route time/distance to instructions & update charging station details
         map.on('load', async () => {
             await getRoute(0); // Ensure this is awaited properly
-            await updateAndDisplayRouteInstructions();  // Ensure this is awaited properly
-            await updateChargingStationDetails();  // Ensure this is awaited properly
+            // await updateAndDisplayRouteInstructions();  // Ensure this is awaited properly
+            // await updateChargingStationDetails();  // Ensure this is awaited properly
             addChargingStations();  // You might need to re-add stations to reflect updated data
         });
 
